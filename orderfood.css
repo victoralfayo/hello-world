@@ -1,0 +1,11 @@
+h1{
+	font:Helvetica;
+	border:2px solid tomato;
+	background-color:MediumSeaGreen;
+	color:Gold;
+	text-align:center;
+	padding:20px;
+}
+body{
+	background-color:gray;
+}
