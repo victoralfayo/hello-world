@@ -1,7 +1,7 @@
 
 <?php
 
-require __DIR__. '/vendor/autoload.php;
+require __DIR__. '/vendor/autoload.php';
 use Twilio\Rest\Client;
 
 $account_sid="AC1adc57d3536f026a8164cd4eaafddebd";
@@ -20,10 +20,10 @@ $client->messages->create(
 );
 if(isset($_POST['number']&& $_POST['message']&& $_POST['send'])){
 
-	<script>window.show("Message sent successfully");</script>
+	<script>window.alert("Message sent successfully");</script>
 }
 else{
-	<script>window.show("Message not suuccessfully sent");</script>
+	<script>window.alert("Message not suuccessfully sent");</script>
 }
 ?>
 <!DOCTYPE HTML>
