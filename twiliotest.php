@@ -1,4 +1,3 @@
-
 <?php
 
 require __DIR__. '/vendor/autoload.php';
@@ -8,22 +7,21 @@ $account_sid="AC1adc57d3536f026a8164cd4eaafddebd";
 $auth_token="6abf88bb960fc64a3a88e347779e99ad";
 
 $twilio_num="+12763859206";
-
 $client=new Client($account_sid,$auth_token);
 $client->messages->create(
 		$_POST['number'],
 		array(
-			'from' => $twilio_number;
-			'body' => $_POST['message'];
+			'from' => $twilio_number,
+			'body' => $_POST['message']
 		
 		)
 );
-if(isset($_POST['number']&& $_POST['message']&& $_POST['send'])){
+if(isset($_POST['number'])&& isset($_POST['message']) && isset($_POST['send'])){
 
-	<script>window.alert("Message sent successfully");</script>
+	echo "<script>". "window.alert(Message sent successfully);"."</script>";
 }
 else{
-	<script>window.alert("Message not suuccessfully sent");</script>
+	echo "<script>". "window.alert(Message not successfully sent);"."</script>";
 }
 ?>
 <!DOCTYPE HTML>
