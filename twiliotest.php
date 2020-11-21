@@ -2,7 +2,7 @@
 
 
 require __DIR__."/vendor/autoload.php";
-use Composer\Rest\Client;
+use Twilio\Rest\Client;
 
 
 $account_sid=getenv(TWILIO_ACCOUNT_SID);
