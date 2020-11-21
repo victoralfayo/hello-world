@@ -1,13 +1,15 @@
 <?php
 
-require __DIR__. '/vendor/autoload.php';
-use Twilio\Rest\Client;
 
-$account_sid="AC1adc57d3536f026a8164cd4eaafddebd";
-$auth_token="6abf88bb960fc64a3a88e347779e99ad";
+require __DIR__."/vendor/autoload.php";
+use Composer\Rest\Client;
+
+
+$account_sid=getenv(TWILIO_ACCOUNT_SID);
+$auth_token=getenv(TWILIO_AUTH_TOKEN);
 
 $twilio_num="+12763859206";
-$client=new Client($account_sid,$auth_token);
+$client= new Client($account_sid,$auth_token); 
 $client->messages->create(
 		$_POST['number'],
 		array(
